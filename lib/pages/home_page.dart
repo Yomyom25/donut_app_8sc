@@ -1,3 +1,9 @@
+import 'package:donut_app_8sc/tabs/burguer_tab.dart';
+import 'package:donut_app_8sc/tabs/donut_tab.dart';
+import 'package:donut_app_8sc/tabs/pancake_tab.dart';
+import 'package:donut_app_8sc/tabs/pizza_tab.dart';
+import 'package:donut_app_8sc/tabs/smootie_tab.dart';
+
 import 'package:donut_app_8sc/utils/my_tab.dart';
 import 'package:flutter/material.dart';
 
@@ -46,10 +52,10 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.only(left: 24.0),
                     child: Row(
                       children: [
-                        Text("I want to ", 
+                        Text("I want to ",
                         style: TextStyle(fontSize: 32),
                         ),
-                        Text("EAT", 
+                        Text("EAT",
                         style: TextStyle(fontSize: 32, 
                         fontWeight: FontWeight.bold, 
                         decoration: TextDecoration.underline),
@@ -58,8 +64,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 //Tab Bar
-                TabBar(tabs: myTabs )
+                TabBar(tabs: myTabs ),
                 //Tab Bar View
+                Expanded(child:
+                TabBarView(
+                  children: [
+                  DonutTab(),
+                  BurguerTab(),
+                  SmootieTab(),
+                  PanCakeTab(),
+                  PizzaTab()
+                  ]
+                  )),
+                //carrito
                 ],
                 ),
       ),

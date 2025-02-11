@@ -16,8 +16,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        tabBarTheme: const TabBarTheme(
+          //cambia el color del tema
+          indicatorColor: Colors.pink,
+        )
       ),
       home: const HomePage(title: 'Flutter Demo Home Page'),
     );
